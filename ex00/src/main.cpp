@@ -1,20 +1,13 @@
 # include "Zombie.hpp"
 
-Zombie::~Zombie (void)
-{
-	std::cout << _name << ": I'm dead again..." << std::endl;
-}
+
 
 int main()
 {
-		Zombie zomb("Bob");
-		zomb.announce();
+		Zombie *zombie = newZombie("Bob");
+		zombie->announce();
 
-		Zombie *zomb2 = new Zombie("Jim");
-		zomb2->announce();
-
-		randomChump("Joe");
-
-		delete zomb2;
+		randomChump("Alice");
+		delete zombie;
 		return 0;
 }

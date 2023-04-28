@@ -4,17 +4,15 @@
 # include <string>
 # include <iostream>
 
-
 class Zombie
 {
-	public:
+public:
 	Zombie(std:: string name);
-	~Zombie();
 	void announce(void);
-
+	~Zombie();
 
 private:
-	std::string _name;
+	std::string name;
 };
 
 Zombie *newZombie(std::string name);

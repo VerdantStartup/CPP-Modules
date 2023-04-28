@@ -6,7 +6,7 @@
 /*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 10:06:46 by verdant           #+#    #+#             */
-/*   Updated: 2023/04/28 12:03:26 by verdant          ###   ########.fr       */
+/*   Updated: 2023/04/28 15:55:43 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void randomChump(std::string name)
 {
-	Zombie zomb(name);
-	zomb.announce();
+	Zombie zombie(name);
+	zombie.announce();
 }
