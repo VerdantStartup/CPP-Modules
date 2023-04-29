@@ -6,7 +6,7 @@
 /*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 16:58:43 by verdant           #+#    #+#             */
-/*   Updated: 2023/04/29 09:21:02 by verdant          ###   ########.fr       */
+/*   Updated: 2023/04/29 18:00:54 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,24 @@
 # include "HumanA.hpp"
 # include "HumanB.hpp"
 
-int main(void)
-{
-	Weapon w1, w2;
-	w1.setType("AK-47");
-	w2.setType("M4A1");
-	HumanA Joe = HumanA("Joe", w1);
-	Joe.attack();
-	HumanB Jay = HumanB("Jay");
-	Jay.attack();
-	Jay.setWeapon(w2);
-	Jay.attack();
+int main() {
+    {
+        Weapon club = Weapon("crude spiked club");
+        HumanA bob("Bob", club);
+        bob.attack();
+        club.setType("some other type of club");
+        bob.attack();
+    }
 
-	return (0);
+    {
+        Weapon club = Weapon("crude spiked club");
+        HumanB jim("Jim");
+        jim.setWeapon(club);
+        jim.attack();
+        club.setType("some other type of club");
+        jim.attack();
+    }
+		
+
+    return 0;
 }
