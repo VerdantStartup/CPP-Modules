@@ -6,7 +6,7 @@
 /*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 09:44:25 by verdant           #+#    #+#             */
-/*   Updated: 2023/04/29 16:09:54 by verdant          ###   ########.fr       */
+/*   Updated: 2023/04/29 16:42:13 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@
 
 void	printing(t_print_type type)
 {
-	if (type == PRINT_HEADER)
-	{
+	if (type == PRINT_HEADER) {
 		cout << endl;
 		for (int i = 0; i < 43; i++)
 			cout << "-";
@@ -33,7 +32,11 @@ void	printing(t_print_type type)
 			cout << "-";
 		cout << endl;
 	}
-	
+	if (type == PRINT_LINE) {
+		for (int i = 0; i < 43; i++)
+			cout << "-";
+		cout << endl;
+	}
 }
 
 string	enterPrompt(string str)

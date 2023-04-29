@@ -6,7 +6,7 @@
 /*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 09:35:35 by verdant           #+#    #+#             */
-/*   Updated: 2023/04/29 16:22:05 by verdant          ###   ########.fr       */
+/*   Updated: 2023/04/29 16:39:55 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ using std::setw;
 
 typedef enum e_print_type {
 	PRINT_HEADER,
+	PRINT_LINE,
 } t_print_type;
 
 class Contact {

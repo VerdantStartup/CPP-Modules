@@ -6,7 +6,7 @@
 /*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 09:35:28 by verdant           #+#    #+#             */
-/*   Updated: 2023/04/29 16:37:05 by verdant          ###   ########.fr       */
+/*   Updated: 2023/04/29 16:41:45 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,6 +131,7 @@ void Phonebook::search(Phonebook &p)
 		<< right << setw(10) << p.m_contact[i].m_lastName << "|"
 		<< right << setw(10) << p.m_contact[i].m_nickname << endl;
 	}
+	printing(PRINT_LINE);
 	idx = checkIndex();
 	cout << endl;
 	cout << "Index: " << idx  << endl;
