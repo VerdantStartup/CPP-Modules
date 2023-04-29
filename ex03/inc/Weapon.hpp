@@ -6,7 +6,7 @@
 /*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 17:00:53 by verdant           #+#    #+#             */
-/*   Updated: 2023/04/28 17:34:21 by verdant          ###   ########.fr       */
+/*   Updated: 2023/04/29 08:31:35 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 # include <string>
 # include <iostream>
-
-# include "HumanA.hpp"
 
 class Weapon
 {

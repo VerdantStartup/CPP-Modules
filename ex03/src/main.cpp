@@ -6,7 +6,7 @@
 /*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 16:58:43 by verdant           #+#    #+#             */
-/*   Updated: 2023/04/28 17:35:41 by verdant          ###   ########.fr       */
+/*   Updated: 2023/04/29 09:21:02 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,20 @@
 // 	const keyword in C++
 
 # include "Weapon.hpp"
+# include "HumanA.hpp"
+# include "HumanB.hpp"
 
 int main(void)
 {
 	Weapon w1, w2;
 	w1.setType("AK-47");
 	w2.setType("M4A1");
-
-	// a.attack();
+	HumanA Joe = HumanA("Joe", w1);
+	Joe.attack();
+	HumanB Jay = HumanB("Jay");
+	Jay.attack();
+	Jay.setWeapon(w2);
+	Jay.attack();
 
 	return (0);
 }
