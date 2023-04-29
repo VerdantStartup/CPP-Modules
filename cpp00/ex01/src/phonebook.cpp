@@ -6,7 +6,7 @@
 /*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 09:35:28 by verdant           #+#    #+#             */
-/*   Updated: 2023/04/29 16:35:18 by verdant          ###   ########.fr       */
+/*   Updated: 2023/04/29 16:37:05 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void Phonebook::add(Phonebook &p)
 	cout << endl;
 	if (m_index == 8) {
 				cout << "Phonebook is full. Overwriting oldest contact." << endl;
-				for (int i = 0; i < 7; i++) {
+				for (int i = 0; i < 9; i++) {
 						p.m_contact[i] = p.m_contact[i+1];
 				}
 				m_index = 7; // set index to last slot in array
