@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/11 11:10:37 by verdant           #+#    #+#             */
-/*   Updated: 2023/05/11 18:29:45 by verdant          ###   ########.fr       */
+/*   Created: 2023/05/11 17:28:10 by verdant           #+#    #+#             */
+/*   Updated: 2023/05/12 17:32:33 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+# include "animal.hpp"
+# include "animalBrain.hpp"
 
-# include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap
+// int main(void)
+// {
+// 		Animal* animalDog1 = new Dog();
+// 		Animal* animalDog2 = new Dog(*(static_cast<Dog*>(animalDog1)));
+
+// 		std::cout << animalDog2->getType() << std::endl;
+// 		animalDog2->makeSound();
+// }
+
+int main(void)
 {
-	public:
-		ScavTrap(void);
-		ScavTrap(std::string name);
-		ScavTrap(ScavTrap const & src);
-		ScavTrap& operator=(ScavTrap const & rhs);
-		~ScavTrap(void);
-		void attack(const std::string &target);
-		void guardGate(void);
-};
+	Animal *dog1 = new Dog();
+	dog1->makeSound();
 
-#endif
+	delete dog1;
+	return 0;
+}

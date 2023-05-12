@@ -6,7 +6,7 @@
 /*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 16:55:18 by verdant           #+#    #+#             */
-/*   Updated: 2023/05/10 13:00:31 by verdant          ###   ########.fr       */
+/*   Updated: 2023/05/11 18:02:37 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ Fixed::Fixed( const float f )
 
 Fixed::Fixed ( const Fixed& src )
 {
-	*this = src;
 	std::cout << "Copy constructor called" << std::endl;
+	*this = src;
 }
 
 Fixed& Fixed::operator=( const Fixed &src )

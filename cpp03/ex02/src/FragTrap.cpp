@@ -6,7 +6,7 @@
 /*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 12:36:21 by verdant           #+#    #+#             */
-/*   Updated: 2023/05/11 12:48:40 by verdant          ###   ########.fr       */
+/*   Updated: 2023/05/11 18:35:06 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,13 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	std::cout << "FragTrap Parametric constructor called" << std::endl;
 }
 
-FragTrap::FragTrap(const FragTrap &src)
+FragTrap::FragTrap(const FragTrap &src) : ClapTrap(src)
 {
 	std::cout << "FragTrap Copy constructor called" << std::endl;
-	*this = src;
+	_name = src._name;
+	_hitPoints = src._hitPoints;
+	_energyPoints = src._energyPoints;
+	_attackDamage = src._attackDamage;
 }
 
 FragTrap& FragTrap::operator=(const FragTrap &rhs)

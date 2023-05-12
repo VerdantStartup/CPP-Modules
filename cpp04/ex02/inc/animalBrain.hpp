@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   animalBrain.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/11 11:10:37 by verdant           #+#    #+#             */
-/*   Updated: 2023/05/11 18:29:45 by verdant          ###   ########.fr       */
+/*   Created: 2023/05/11 17:19:12 by verdant           #+#    #+#             */
+/*   Updated: 2023/05/11 17:20:00 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#ifndef ANIMALBRAIN_HPP
+# define ANIMALBRAIN_HPP
 
-# include "ClapTrap.hpp"
+# include <iostream>
 
-class ScavTrap : public ClapTrap
+using std::string;
+using std::cout;
+using std::endl;
+
+class Brain
 {
+	protected:
+		string _ideas[100];
 	public:
-		ScavTrap(void);
-		ScavTrap(std::string name);
-		ScavTrap(ScavTrap const & src);
-		ScavTrap& operator=(ScavTrap const & rhs);
-		~ScavTrap(void);
-		void attack(const std::string &target);
-		void guardGate(void);
+		Brain(void);
+		Brain(const Brain &src);
+		~Brain(void);
+		Brain& operator=(const Brain &rhs);
 };
 
 #endif
