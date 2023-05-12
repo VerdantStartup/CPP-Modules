@@ -6,7 +6,7 @@
 /*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 09:35:35 by verdant           #+#    #+#             */
-/*   Updated: 2023/04/29 16:39:55 by verdant          ###   ########.fr       */
+/*   Updated: 2023/05/12 18:05:47 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,24 @@ typedef enum e_print_type {
 } t_print_type;
 
 class Contact {
-	public:
-	
+	private:
 		string	m_firstName;
 		string	m_lastName;
 		string	m_phonenumber;
 		string	m_nickname;
 		string	m_darkestSeceret;
+	public:
+		string getFirstName(void);
+		string getLastName(void);
+		string getNickname(void);
+		string getPhoneNumber(void);
+		string getDarkestSecret(void);
+		void setFirstName(string str);
+		void setLastName(string str);
+		void setPhoneNumber(string str);
+		void setNickname(string str);
+		void setDarkestSecret(string str);
+		
 };
 
 class Phonebook {

@@ -1,4 +1,4 @@
-CXX := g++
+CXX := clang++
 CXXFLAGS := -Wall -Wextra -Werror -std=c++98
 INC := -Iinc/
 
@@ -29,11 +29,11 @@ $(OBJ_DIR):
 	@mkdir -p $(OBJ_DIR)
 
 clean:
-	@rm -f $(OBJ_DIR)*.o
+	@rm -rf $(OBJ_DIR)
 	@echo "$(RED)Object files removed.$(RESET)"
 
 fclean: clean
 	@rm -f $(TARGET)
 	@echo "$(RED)Executable removed.$(RESET)"
 
-re: fclean all
+re: fclean $(OBJ_DIR) all

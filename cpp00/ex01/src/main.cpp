@@ -6,7 +6,7 @@
 /*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 09:44:25 by verdant           #+#    #+#             */
-/*   Updated: 2023/04/29 16:42:13 by verdant          ###   ########.fr       */
+/*   Updated: 2023/05/12 18:07:29 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,14 @@ string	enterPrompt(string str)
 	string input;
 
 	cout << str;
-	getline(cin, input);
-	while (input.empty() == true)
+	if (!getline(cin, input))
+	{
+		cout << "Error: cin failed!" << endl;
+		exit(0);
+	}
+	if (input.empty() == true)
 		return (input);
-	for (int i = 0; i < input.length(); i++)
+	for (unsigned long i = 0; i < input.length(); i++)
 		input[i] = toupper(input[i]);
 	return (input);
 }

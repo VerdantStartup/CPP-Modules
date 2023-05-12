@@ -6,7 +6,7 @@
 /*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 09:35:28 by verdant           #+#    #+#             */
-/*   Updated: 2023/04/29 17:18:27 by verdant          ###   ########.fr       */
+/*   Updated: 2023/05/12 18:11:34 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ Phonebook::Phonebook() : m_index(0)
 	cout << endl;
 }
 
+// else if's could be replaced use of function pointers
 void Phonebook::storeInput(Contact &c, string str, int idx)
 {
 		string	input;
@@ -43,15 +44,15 @@ void Phonebook::storeInput(Contact &c, string str, int idx)
 			input.resize(10);
 		}
 		if (idx == 0)
-			c.m_firstName = input;
+			c.setFirstName(input);
 		else if (idx == 1)
-			c.m_lastName = input;
+			c.setLastName(input);
 		else if (idx == 2)
-			c.m_nickname = input;
+			c.setNickname(input);
 		else if (idx == 3)
-			c.m_phonenumber = input;
+			c.setPhoneNumber(input);
 		else if (idx == 4)
-			c.m_darkestSeceret = input;
+			c.setDarkestSecret(input);
 }
 
 void Phonebook::add(Phonebook &p)
@@ -65,7 +66,7 @@ void Phonebook::add(Phonebook &p)
 				for (int i = 0; i < 8; i++) {
 						p.m_contact[i] = p.m_contact[i+1];
 				}
-				m_index = 7; // set index to last slot in array
+				m_index = 7;
 		}
 		for (int i = 0; i < 5; i++) {
 				storeInput(p.m_contact[m_index], arr[i], i);
@@ -127,17 +128,17 @@ void Phonebook::search(Phonebook &p)
 	printing(PRINT_HEADER);
 	for (int i = 0; i < p.m_index; i++) {
 		cout << right << setw(10) << i << "|"
-		<< right << setw(10) << p.m_contact[i].m_firstName << "|"
-		<< right << setw(10) << p.m_contact[i].m_lastName << "|"
-		<< right << setw(10) << p.m_contact[i].m_nickname << endl;
+		<< right << setw(10) << p.m_contact[i].getFirstName() << "|"
+		<< right << setw(10) << p.m_contact[i].getLastName() << "|"
+		<< right << setw(10) << p.m_contact[i].getNickname() << endl;
 	}
 	printing(PRINT_LINE);
 	idx = checkIndex();
 	cout << endl;
 	cout << "Index: " << idx  << endl;
-	cout << "First name: " << p.m_contact[idx].m_firstName << endl;
-	cout << "Last name: " << p.m_contact[idx].m_lastName << endl;
-	cout << "Nickname: " << p.m_contact[idx].m_nickname << endl;
+	cout << "First name: " << p.m_contact[idx].getFirstName() << endl;
+	cout << "Last name: " << p.m_contact[idx].getLastName() << endl;
+	cout << "Nickname: " << p.m_contact[idx].getNickname() << endl;
 	cout << endl;
 }
 
@@ -145,4 +146,54 @@ void Phonebook::exit()
 {
 	cout << "Exiting phonebook" << endl;
 	std::exit(0);
+}
+
+string Contact::getFirstName(void)
+{
+	return (m_firstName);
+}
+
+string Contact::getLastName(void)
+{
+	return (m_lastName);
+}
+
+string Contact::getNickname(void)
+{
+	return (m_nickname);
+}
+
+string Contact::getPhoneNumber(void)
+{
+	return (m_phonenumber);
+}
+
+string Contact::getDarkestSecret(void)
+{
+	return (m_darkestSeceret);
+}
+
+void Contact::setFirstName(string str)
+{
+	m_firstName = str;
+}
+
+void Contact::setLastName(string str)
+{
+	m_lastName = str;
+}
+
+void Contact::setNickname(string str)
+{
+	m_nickname = str;
+}
+
+void Contact::setPhoneNumber(string str)
+{
+	m_phonenumber = str;
+}
+
+void Contact::setDarkestSecret(string str)
+{
+	m_darkestSeceret = str;
 }
