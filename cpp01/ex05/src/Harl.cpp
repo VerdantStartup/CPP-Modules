@@ -6,7 +6,7 @@
 /*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 11:20:34 by verdant           #+#    #+#             */
-/*   Updated: 2023/04/30 11:51:13 by verdant          ###   ########.fr       */
+/*   Updated: 2023/05/13 14:10:05 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void::Harl::error ( void )
 void Harl::complain( string level )
 {
 	string	levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-	func funcs[4] = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+	func		funcs[4] = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 
 	for (int i = 0; i < 4; i++)
 	{

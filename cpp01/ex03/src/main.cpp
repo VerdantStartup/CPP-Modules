@@ -6,7 +6,7 @@
 /*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 16:58:43 by verdant           #+#    #+#             */
-/*   Updated: 2023/04/29 18:00:54 by verdant          ###   ########.fr       */
+/*   Updated: 2023/05/13 13:57:18 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,24 +24,21 @@
 # include "HumanA.hpp"
 # include "HumanB.hpp"
 
-int main() {
-    {
-        Weapon club = Weapon("crude spiked club");
-        HumanA bob("Bob", club);
-        bob.attack();
-        club.setType("some other type of club");
-        bob.attack();
-    }
+int main(void)
+{
+	Weapon club = Weapon("crude spiked club");
+	HumanA bob("Bob", club);	// HumanA has a Weapon
+	bob.attack();
+	club.setType("some other type of club");
+	bob.attack();
 
-    {
-        Weapon club = Weapon("crude spiked club");
-        HumanB jim("Jim");
-        jim.setWeapon(club);
-        jim.attack();
-        club.setType("some other type of club");
-        jim.attack();
-    }
-		
+	Weapon club1 = Weapon("crude spiked club");
+	HumanB jim("Jim");	// HumanB has a Weapon
+	jim.attack();
+	jim.setWeapon(club1);
+	jim.attack();
+	club1.setType("some other type of club");
+	jim.attack();
 
-    return 0;
+	return (0);
 }

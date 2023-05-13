@@ -6,7 +6,7 @@
 /*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 19:34:32 by verdant           #+#    #+#             */
-/*   Updated: 2023/04/30 08:47:32 by verdant          ###   ########.fr       */
+/*   Updated: 2023/05/13 14:06:18 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,18 @@ Replace::Replace(std::string filename, std::string s1, std::string s2) {
 	this->_s1 = s1;
 	this->_s2 = s2;
 	
+	if (filename.empty() || s1.empty() || s2.empty()) {
+		cout << "Empty string" << endl;
+		return ;
+	}
 	_ifs.open(filename);
-	if (_ifs.good() == false){
+	if (_ifs.good() == false) {
 		cout << "File does not exsit" << endl;
+		return ;
+	}
+	if (_ifs.peek() == std::ifstream::traits_type::eof())
+	{
+		std::cout << "The file is empty." << std::endl;
 		return ;
 	}
 	_ofs.open(filename + ".replace");
