@@ -6,7 +6,7 @@
 /*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 15:44:14 by verdant           #+#    #+#             */
-/*   Updated: 2023/05/12 16:41:43 by verdant          ###   ########.fr       */
+/*   Updated: 2023/05/13 15:59:22 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,6 @@ string Animal::getType(void) const
 Dog::Dog(void) : Animal() , _brain(new Brain())
 {
 	cout << "Dog Default constructor called" << endl;
-	this->_type = "Dog";
 }
 
 Dog::Dog(const Dog &src) : Animal(src), _brain(new Brain(*src._brain))
@@ -92,7 +91,6 @@ void Dog::makeSound(void) const
 Cat::Cat(void) : Animal() , _brain(new Brain())
 {
 	cout << "Cat Default constructor called" << endl;
-	this->_type = "Cat";
 }
 
 Cat::Cat(const Cat &src) : Animal(src), _brain(new Brain(*src._brain))
