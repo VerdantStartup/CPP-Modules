@@ -6,7 +6,7 @@
 /*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 16:04:56 by verdant           #+#    #+#             */
-/*   Updated: 2023/05/11 18:00:58 by verdant          ###   ########.fr       */
+/*   Updated: 2023/05/13 14:41:47 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ Fixed& Fixed::operator=( const Fixed& src) {
 	std::cout << "Assignation operator called" << std::endl;
 	if (this == &src)
 		return (*this);
-	
 	_value = src._value;
 	return (*this);
 }

@@ -6,7 +6,7 @@
 /*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 16:43:08 by verdant           #+#    #+#             */
-/*   Updated: 2023/05/12 17:40:15 by verdant          ###   ########.fr       */
+/*   Updated: 2023/05/13 14:49:43 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ class Fixed
 		Fixed ( const Fixed & src );
 		Fixed & operator=( const Fixed &src );
 		~Fixed ( void );
+		int	getRawBits( void ) const;
+		void setRawBits( int const raw);
 		float toFloat( void ) const;
 		int toInt( void ) const;
 

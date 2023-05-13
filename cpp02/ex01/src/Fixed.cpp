@@ -6,7 +6,7 @@
 /*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 16:55:18 by verdant           #+#    #+#             */
-/*   Updated: 2023/05/11 18:02:37 by verdant          ###   ########.fr       */
+/*   Updated: 2023/05/13 14:57:13 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ Fixed::Fixed( const float f )
 Fixed::Fixed ( const Fixed& src )
 {
 	std::cout << "Copy constructor called" << std::endl;
-	*this = src;
+	_raw = src._raw;
 }
 
 Fixed& Fixed::operator=( const Fixed &src )
@@ -47,6 +47,16 @@ Fixed& Fixed::operator=( const Fixed &src )
 		return (*this);
 	_raw = src._raw;
 	return (*this);
+}
+
+int Fixed::getRawBits( void ) const
+{
+	return (_raw);
+}	
+
+void Fixed::setRawBits( int const raw)
+{
+	_raw = raw;
 }
 
 float Fixed::toFloat( void ) const

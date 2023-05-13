@@ -1,5 +1,5 @@
-CXX := g++
-CXXFLAGS := -Wall -Wextra -Werror -std=c++98
+CXX := clang++
+CXXFLAGS := -std=c++98 -Wall -Wextra -Werror 
 INC := -Iinc/
 
 TARGET := fixedPoint
@@ -29,7 +29,6 @@ $(OBJ_DIR):
 	@mkdir -p $(OBJ_DIR)
 
 clean:
-	@rm -f $(OBJ_DIR)*.o
 	@rm -rf $(OBJ_DIR)
 	@echo "$(RED)Object files removed.$(RESET)"
 
@@ -37,4 +36,4 @@ fclean: clean
 	@rm -f $(TARGET)
 	@echo "$(RED)Executable removed.$(RESET)"
 
-re: fclean all
+re: fclean $(OBJ_DIR) all

@@ -6,7 +6,7 @@
 /*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 16:52:29 by verdant           #+#    #+#             */
-/*   Updated: 2023/05/11 18:06:11 by verdant          ###   ########.fr       */
+/*   Updated: 2023/05/13 14:51:06 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int	main ( void )
 	Fixed const d( b );
 
 	a = Fixed( 1234.4321f );
+
+	std::cout << "b as a Fixed Point Value is " << b.getRawBits() << std::endl;
 
 	std::cout << "a is " << a << std::endl;
 	std::cout << "b is " << b << std::endl;

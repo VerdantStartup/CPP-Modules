@@ -6,7 +6,7 @@
 /*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 11:01:44 by verdant           #+#    #+#             */
-/*   Updated: 2023/05/10 16:56:08 by verdant          ###   ########.fr       */
+/*   Updated: 2023/05/13 15:02:06 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,30 @@
 
 Fixed::Fixed( void ) : _value(0)
 {
-	// std::cout << "Default constructor called" << std::endl;
+	std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::~Fixed ( void )
 {
-	// std::cout << "Destructor called" << std::endl;
+	std::cout << "Destructor called" << std::endl;
 }
 
 Fixed::Fixed( const int n ) 
 {
 		_value = n * 256;
-	// std::cout << "Int constructor called" << std::endl;
+	std::cout << "Int constructor called" << std::endl;
 }
 
 Fixed::Fixed( const float f )
 {
 	_value = roundf(f * 256);
-	// std::cout << "Float constructor called" << std::endl;
+	std::cout << "Float constructor called" << std::endl;
 }
 
 Fixed::Fixed(const Fixed& src )
 {
-	*this = src;
-	// std::cout << "Copy constructor called" << std::endl;
+	_value = src._value;
+	std::cout << "Copy constructor called" << std::endl;
 }
 
 Fixed& Fixed::operator=( const Fixed& src)
@@ -50,13 +50,13 @@ Fixed& Fixed::operator=( const Fixed& src)
 
 int Fixed::toInt( void ) const
 {
-	// std::cout << "toInt member function called" << std::endl;
+	std::cout << "toInt member function called" << std::endl;
 	return (this->_value / 256);
 }
 
 float Fixed::toFloat( void ) const
 {
-	// std::cout << "toFloat member function called" << std::endl;
+	std::cout << "toFloat member function called" << std::endl;
 	return ((float)_value / 256);
 }
 
