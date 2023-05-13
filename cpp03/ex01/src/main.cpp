@@ -6,12 +6,12 @@
 /*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 11:17:25 by verdant           #+#    #+#             */
-/*   Updated: 2023/05/11 12:54:37 by verdant          ###   ########.fr       */
+/*   Updated: 2023/05/13 15:16:23 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ScavTrap.hpp"
-#include "../inc/ClapTrap.hpp"x
+#include "../inc/ClapTrap.hpp"
 
 int main(void)
 {

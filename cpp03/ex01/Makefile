@@ -1,6 +1,6 @@
 CXX := g++
 CXXFLAGS := -Wall -Wextra -Werror -std=c++98
-INC := -I inc/
+INC := -Iinc/
 
 TARGET := scavTrap
 
