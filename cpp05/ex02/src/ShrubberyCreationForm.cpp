@@ -6,7 +6,7 @@
 /*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 10:51:05 by verdant           #+#    #+#             */
-/*   Updated: 2023/05/29 11:10:00 by verdant          ###   ########.fr       */
+/*   Updated: 2023/05/29 16:46:09 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,13 @@ ShurbberyCreationForm::~ShurbberyCreationForm(void)
 {
 	std::cout << "ShurbberyCreationForm destructor called" << std::endl;
 	return ;
+}
+
+void	ShurbberyCreationForm::execute(const Bureaucrat& executor) const
+{
+	checkBureaucrat(executor);
+	std::ofstream ofs(this->getName() + "_shrubbery");
+	
 }
 
 

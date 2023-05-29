@@ -6,7 +6,7 @@
 /*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 11:02:25 by verdant           #+#    #+#             */
-/*   Updated: 2023/05/29 11:10:24 by verdant          ###   ########.fr       */
+/*   Updated: 2023/05/29 16:02:50 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,5 @@ RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& r
 RobotomyRequestForm::~RobotomyRequestForm() {
 		std::cout << "RobotomyRequestForm destructor called" << std::endl;
 }
+
+

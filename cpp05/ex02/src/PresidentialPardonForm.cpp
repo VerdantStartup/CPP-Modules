@@ -6,7 +6,7 @@
 /*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 10:59:15 by verdant           #+#    #+#             */
-/*   Updated: 2023/05/29 11:14:56 by verdant          ###   ########.fr       */
+/*   Updated: 2023/05/29 16:00:38 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,8 @@ PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPard
 		return *this;
 }
 
-PresidentialPardonForm::~PresidentialPardonForm() {}
+PresidentialPardonForm::~PresidentialPardonForm()
+{
+	std::cout << "PresidentialPardonForm destructor called" << std::endl;
+	return ;
+}

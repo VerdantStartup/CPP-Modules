@@ -6,7 +6,7 @@
 /*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 10:42:09 by verdant           #+#    #+#             */
-/*   Updated: 2023/05/29 10:47:27 by verdant          ###   ########.fr       */
+/*   Updated: 2023/05/29 17:12:51 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,18 @@
 
 # include "Bureaucrat.hpp"
 
+using std::cout;
+using std::endl;
+
 class Bureaucrat;
+
+class GradeNotSigned : public std::exception
+{
+	public:
+		const char* what() const throw() {
+			return ("Form isn't signed");
+		}
+};
 
 class AForm
 {
@@ -39,7 +50,8 @@ class AForm
 		int					getGradeSign(void) const;
 		int					getGradeExec(void) const;
 		void				beSigned(const Bureaucrat& src);
-		void				signAForm(const AForm& src);
+		void				signForm(const AForm& src);
+		void				checkBureaucrat(const Bureaucrat& src) const;
 };
 
 #endif 
