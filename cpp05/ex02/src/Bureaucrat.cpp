@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mwilsch <mwilsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 16:26:43 by verdant           #+#    #+#             */
-/*   Updated: 2023/05/27 18:46:06 by verdant          ###   ########.fr       */
+/*   Updated: 2023/05/31 16:33:37 by mwilsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,14 @@ void	Bureaucrat::decGrade(void) {
 	if (this->_grade + 1 > 150)
 		throw GradeTooLowException();
 	this->_grade++;
+}
+
+void	Bureaucrat::executeForm(const AForm& form)
+{
+	try {
+		form.execute(*this);
+		std::cout << this->_name << " executes " << form.getName() << std::endl;
+	} catch (std::exception &e) {
+		std::cout << this->_name << " cannot execute " << form.getName() << " because " << e.what() << std::endl;
+	}
 }

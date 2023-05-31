@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.cpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mwilsch <mwilsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 10:59:15 by verdant           #+#    #+#             */
-/*   Updated: 2023/05/29 16:00:38 by verdant          ###   ########.fr       */
+/*   Updated: 2023/05/31 16:18:51 by mwilsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,12 @@ PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPard
 
 PresidentialPardonForm::~PresidentialPardonForm()
 {
-	std::cout << "PresidentialPardonForm destructor called" << std::endl;
+	cout << "--- PresidentialPardonForm destructor called ---" << endl;
 	return ;
+}
+
+void	PresidentialPardonForm::execute(const Bureaucrat& executor) const
+{
+	checkBureaucrat(executor);
+	cout << this->getName() << " has been pardoned by Zafod Beeblebrox." << endl;
 }

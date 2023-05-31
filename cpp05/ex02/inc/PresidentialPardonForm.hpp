@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mwilsch <mwilsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 10:56:50 by verdant           #+#    #+#             */
-/*   Updated: 2023/05/29 16:56:47 by verdant          ###   ########.fr       */
+/*   Updated: 2023/05/31 16:19:37 by mwilsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class PresidentialPardonForm : public AForm {
 		PresidentialPardonForm& operator=(const PresidentialPardonForm& src);
 		virtual ~PresidentialPardonForm(void);
 
-		// virtual void		execute(const Bureaucrat& executor) const;
+		virtual void		execute(const Bureaucrat& executor) const;
 };
 
 #endif

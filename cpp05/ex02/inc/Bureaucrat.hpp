@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mwilsch <mwilsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 16:25:16 by verdant           #+#    #+#             */
-/*   Updated: 2023/05/31 14:54:19 by verdant          ###   ########.fr       */
+/*   Updated: 2023/05/31 16:37:19 by mwilsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 # include <exception>
 # include <iostream>
+
+# include "AForm.hpp"
+class AForm;
 
 class GradeTooHighException : public std::exception {
 public:
@@ -44,6 +47,7 @@ class Bureaucrat {
 		std::string	getName(void) const;
 		void	incGrade(void);
 		void	decGrade(void);
+		void executeForm(const AForm& form);
 };
 
 

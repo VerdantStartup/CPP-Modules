@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mwilsch <mwilsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 10:51:05 by verdant           #+#    #+#             */
-/*   Updated: 2023/05/31 14:46:29 by verdant          ###   ########.fr       */
+/*   Updated: 2023/05/31 16:18:04 by mwilsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ ShurbberyCreationForm& ShurbberyCreationForm::operator=(const ShurbberyCreationF
 
 ShurbberyCreationForm::~ShurbberyCreationForm(void)
 {
-	std::cout << endl <<  "ShurbberyCreationForm destructor called" << std::endl;
+	cout << endl <<  "--- ShurbberyCreationForm destructor called ---" << endl;
 	return ;
 }
 
@@ -41,7 +41,6 @@ void	ShurbberyCreationForm::execute(const Bureaucrat& executor) const
 	std::ofstream ofs(this->getName() + "_shrubbery");	
 	
 	string ascii_tree;
-	
 	ascii_tree += "       /\\";
 	ascii_tree += "\n";
 	ascii_tree += "      /  \\";

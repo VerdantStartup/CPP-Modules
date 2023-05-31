@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mwilsch <mwilsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 16:04:03 by verdant           #+#    #+#             */
-/*   Updated: 2023/05/31 14:53:32 by verdant          ###   ########.fr       */
+/*   Updated: 2023/05/31 16:24:42 by mwilsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,6 @@ void	AForm::checkBureaucrat(const Bureaucrat& src) const
 {
 	if (this->getSigned() == false)
 		throw GradeNotSigned();
-	if (!(src.getGrade() <= this->getGradeSign()))
+	if (!(src.getGrade() <= this->getGradeExec()))
 		throw GradeTooLowException();
 }

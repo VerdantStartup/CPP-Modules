@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mwilsch <mwilsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 11:02:25 by verdant           #+#    #+#             */
-/*   Updated: 2023/05/31 15:12:56 by verdant          ###   ########.fr       */
+/*   Updated: 2023/05/31 16:17:31 by mwilsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,7 @@ RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& r
 }
 
 RobotomyRequestForm::~RobotomyRequestForm() {
-		cout << "-------------------" << endl;
-		std::cout << "RobotomyRequestForm destructor called" << std::endl;
+	cout << "--- RobotomyRequestForm destructor called ---" << endl;
 }
 
 void RobotomyRequestForm::execute(const Bureaucrat& executor) const
