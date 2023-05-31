@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mwilsch <mwilsch@student.42.fr>            +#+  +:+       +#+        */
+/*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 16:04:03 by verdant           #+#    #+#             */
-/*   Updated: 2023/05/29 17:29:35 by mwilsch          ###   ########.fr       */
+/*   Updated: 2023/05/31 14:53:32 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,10 @@ void	AForm::signForm(const AForm& src)
 	if (src.getSigned())
 		std::cout << getName() << ": signed succesfully" << std::endl;
 	else
-		std::cout << "Form was not signed. " << src.getGradeSign() << "is to low!" << std::endl;
+	{
+		cout << "Form was not signed. ";
+		cout << "The Bureaucrat's score needs to be lower than " << src.getGradeSign() << endl;
+	}
 }
 
 void	AForm::checkBureaucrat(const Bureaucrat& src) const

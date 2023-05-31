@@ -6,7 +6,7 @@
 /*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 16:25:16 by verdant           #+#    #+#             */
-/*   Updated: 2023/05/27 18:44:19 by verdant          ###   ########.fr       */
+/*   Updated: 2023/05/31 14:54:19 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ public:
 class Bureaucrat {
 	private:
 		const std::string	_name;
-		int						_grade;
+		int								_grade;
 	public:
 		Bureaucrat(void);
 		Bureaucrat(const std::string name, int grade);

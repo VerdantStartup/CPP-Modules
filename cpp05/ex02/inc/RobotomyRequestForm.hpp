@@ -6,7 +6,7 @@
 /*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 10:58:47 by verdant           #+#    #+#             */
-/*   Updated: 2023/05/29 16:56:16 by verdant          ###   ########.fr       */
+/*   Updated: 2023/05/31 14:41:47 by verdant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class RobotomyRequestForm : public AForm
 		RobotomyRequestForm& operator=(const RobotomyRequestForm& src);
 		virtual ~RobotomyRequestForm(void);
 
-		// virtual void	execute(const Bureaucrat& executor) const;
+		virtual void	execute(const Bureaucrat& executor) const;
 };
 
 #endif
