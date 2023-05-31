@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mwilsch <mwilsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 10:42:09 by verdant           #+#    #+#             */
-/*   Updated: 2023/05/29 17:12:51 by verdant          ###   ########.fr       */
+/*   Updated: 2023/05/29 17:37:41 by mwilsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 
 using std::cout;
 using std::endl;
+using std::string;
 
 class Bureaucrat;
 
