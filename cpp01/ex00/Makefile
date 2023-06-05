@@ -22,11 +22,9 @@ $(TARGET): $(OBJ)
 	@$(CXX) $(CXXFLAGS)  $^ -o $@
 	@echo "$(GREEN)Executable created.$(RESET)"
 
-$(OBJ_DIR)%.o: $(SRC_DIR)%.cpp | $(OBJ_DIR)
+$(OBJ_DIR)%.o: $(SRC_DIR)%.cpp inc/*.hpp
+	@mkdir -p $(dir $@)
 	@$(CXX) $(CXXFLAGS) $(INC) -c $< -o $@
-
-$(OBJ_DIR):
-	@mkdir -p $(OBJ_DIR)
 
 clean:
 	@rm -rf $(OBJ_DIR)
@@ -36,4 +34,4 @@ fclean: clean
 	@rm -f $(TARGET)
 	@echo "$(RED)Executable removed.$(RESET)"
 
-re: fclean $(OBJ_DIR) all
+re: fclean all

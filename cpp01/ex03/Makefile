@@ -22,7 +22,8 @@ $(TARGET): $(OBJ)
 	@$(CXX) $(CXXFLAGS)  $^ -o $@
 	@echo "$(GREEN)Executable created.$(RESET)"
 
-$(OBJ_DIR)%.o: $(SRC_DIR)%.cpp | $(OBJ_DIR)
+$(OBJ_DIR)%.o: $(SRC_DIR)%.cpp inc/*.hpp
+	@mkdir -p $(dir $@)
 	@$(CXX) $(CXXFLAGS) $(INC) -c $< -o $@
 
 $(OBJ_DIR):

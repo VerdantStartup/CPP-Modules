@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mwilsch <mwilsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 11:20:34 by verdant           #+#    #+#             */
-/*   Updated: 2023/05/13 14:10:05 by verdant          ###   ########.fr       */
+/*   Updated: 2023/06/05 15:45:46 by mwilsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,6 @@
 using std::string;
 using std::cout;
 using std::endl;
-
-// In my complain function I can use a stack array with the 4 strings inside
-// When I call complain I can compare the input string to the strings
-	// Inside of the array
-// When a number has been found then I pass the function pointer
-
 
 void::Harl::debug ( void ) 
 {
