@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mwilsch <mwilsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 16:04:56 by verdant           #+#    #+#             */
-/*   Updated: 2023/05/27 16:13:56 by verdant          ###   ########.fr       */
+/*   Updated: 2023/06/05 16:18:30 by mwilsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int Fixed::getRawBits( void ) const
 	return (_value);
 }	
 
-void Fixed::setRawBits( int const raw)
+void Fixed::setRawBits( int const raw )
 {
 	_value = raw;
 }
