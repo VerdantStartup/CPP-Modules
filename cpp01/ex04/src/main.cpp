@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mwilsch <mwilsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 19:31:41 by verdant           #+#    #+#             */
-/*   Updated: 2023/04/30 08:48:01 by verdant          ###   ########.fr       */
+/*   Updated: 2023/06/06 17:31:32 by mwilsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,12 @@
 // 5. Close file
 
 
-int main(void)
+int main(int argc, char *argv[])
 {
-	Replace r1("test", "test", "TEST");
+	if (argc != 4)
+	{
+		std::cout << "Usage: ./replace <filename> <s1> <s2>" << std::endl;
+		return (1);
+	}
+	Replace r(argv[1], argv[2], argv[3]);
 }

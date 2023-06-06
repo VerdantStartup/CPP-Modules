@@ -6,7 +6,7 @@
 /*   By: mwilsch <mwilsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 19:34:32 by verdant           #+#    #+#             */
-/*   Updated: 2023/06/05 17:48:09 by mwilsch          ###   ########.fr       */
+/*   Updated: 2023/06/06 17:32:44 by mwilsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,31 +22,24 @@ Replace::~Replace(void) {
 	std::cout << "Files closed" << std::endl;
 };
 
-// Refactor this code using the earse and insert methods of the std::string class
-void Replace::replaceOccurence() {
-	std::string			line;
-	std::string			replaceWith = this->_s2;
-	size_t					pos = 0;
+void Replace::replaceOccurence(void) {
+	std::string line;
+	std::string replaceWith = this->_s2;
+	size_t pos = 0;
 
 	while (std::getline(_ifs, line))
 	{
-			pos = line.find(this->_s1);
-			while (pos != std::string::npos) 
-			{
-				for (size_t i = 0; i < replaceWith.length(); i++)
-				{
-					line[pos] = replaceWith[i];
-					if (line[pos] == '\n')
-						std::cout << "newline" << endl;
-					// std::cout << line[pos] << endl;
-					pos++;
-				}
-				std::cout << line << endl;
-				pos = line.find(this->_s1, pos + _s2.length());
-			}
-		_ofs << line << endl;
+		pos = line.find(this->_s1);
+		while (pos != std::string::npos)
+		{
+			line.erase(pos, this->_s1.length());
+			line.insert(pos, replaceWith);
+			pos = line.find(this->_s1, pos + replaceWith.length());
+		}
+		_ofs << line << std::endl;
 	}
 }
+
 
 
 
