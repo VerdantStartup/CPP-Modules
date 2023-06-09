@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mwilsch <mwilsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 12:36:21 by verdant           #+#    #+#             */
-/*   Updated: 2023/05/11 18:35:06 by verdant          ###   ########.fr       */
+/*   Updated: 2023/06/09 09:15:56 by mwilsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ FragTrap::FragTrap(void) : ClapTrap()
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
-	_name = name;
 	_hitPoints = 100;
 	_energyPoints = 100;
 	_attackDamage = 30;
@@ -33,7 +32,6 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 FragTrap::FragTrap(const FragTrap &src) : ClapTrap(src)
 {
 	std::cout << "FragTrap Copy constructor called" << std::endl;
-	_name = src._name;
 	_hitPoints = src._hitPoints;
 	_energyPoints = src._energyPoints;
 	_attackDamage = src._attackDamage;

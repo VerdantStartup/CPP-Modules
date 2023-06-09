@@ -1,4 +1,4 @@
-CXX := g++
+CXX := clang++
 CXXFLAGS := -Wall -Wextra -Werror -std=c++98
 INC := -Iinc/
 

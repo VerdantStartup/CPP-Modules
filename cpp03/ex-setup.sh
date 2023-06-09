@@ -32,7 +32,7 @@ done
 touch "$dirname/Makefile"
 
 cat > $dirname/Makefile <<EOF
-CXX := g++
+CXX := clang++
 CXXFLAGS := -Wall -Wextra -Werror -std=c++98
 INC := -Iinc/
 

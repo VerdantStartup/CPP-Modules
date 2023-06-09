@@ -3,17 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mwilsch <mwilsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 09:14:42 by verdant           #+#    #+#             */
-/*   Updated: 2023/05/11 11:03:34 by verdant          ###   ########.fr       */
+/*   Updated: 2023/06/07 17:17:35 by mwilsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../inc/ClapTrap.hpp"
-
-
-// How can I specify which ClapTrap instance I want to attack?
 
 int main(void)
 {

@@ -6,7 +6,7 @@
 /*   By: mwilsch <mwilsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 19:31:41 by verdant           #+#    #+#             */
-/*   Updated: 2023/06/06 17:31:32 by mwilsch          ###   ########.fr       */
+/*   Updated: 2023/06/06 17:46:11 by mwilsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 {
 	if (argc != 4)
 	{
-		std::cout << "Usage: ./replace <filename> <s1> <s2>" << std::endl;
+		std::cout << "Usage: ./sed <filename> <s1> <s2>" << std::endl;
 		return (1);
 	}
 	Replace r(argv[1], argv[2], argv[3]);
