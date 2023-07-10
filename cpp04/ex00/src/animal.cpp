@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: verdant <verdant@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mwilsch <mwilsch@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 15:44:14 by verdant           #+#    #+#             */
-/*   Updated: 2023/05/11 18:53:00 by verdant          ###   ########.fr       */
+/*   Updated: 2023/06/09 13:08:23 by mwilsch          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "animal.hpp"
+
+/*			Animal Functions			*/
 
 Animal::Animal(void) : _type("Animal")
 {
@@ -46,6 +48,8 @@ string Animal::getType(void) const
 	return this->_type;
 }
 
+/*			Dog Functions			*/
+
 Dog::Dog(void) : Animal()
 {
 	cout << "Dog Default constructor called" << endl;
@@ -74,6 +78,8 @@ void Dog::makeSound(void) const
 {
 	cout << "Bark" << endl;
 }
+
+/*			Cat Functions			*/
 
 Cat::Cat(void) : Animal()
 {
